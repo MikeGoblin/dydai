@@ -1,0 +1,69 @@
+/* pages/orders/orders.wxss */
+page {
+  background-color: #efeff4;
+}
+.order11{
+  display: flex;
+}
+.add{
+  background-color: rgb(62,222,199);
+  position: fixed; 
+  width: 100rpx; 
+  height: 100rpx; 
+  left: 630rpx; 
+  top: 400rpx; 
+  display: block; 
+  box-sizing: border-box; 
+  border-radius: 50rpx; 
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 80rpx;
+}
+.order1{
+  margin-top: 20px;
+  width: 96%;
+  margin-left: 2%;
+  height: 250rpx;
+  background-color: white;
+  border-radius: 30rpx;
+}
+.text1{
+  margin-left: 20px;
+  font-size: 13px;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+}
+.text2{
+  height: 40px;
+  width: 20%;
+}
+.text3{
+  color: #a4a4a7;
+  height: 40px;
+  line-height: 38px;
+  font-size: 12px;
+  width: 30%;
+}
+.text4{
+  color: #676768;
+  font-size: 12px;
+  margin: 0px 20px;
+}
+.text5{
+  position: relative; 
+  left: 92rpx; 
+  top: 70rpx; 
+  font-size: 12px
+}
+.text6{
+  color: rgb(62,222,199);
+  position: relative; 
+  left: 336rpx; 
+  top: 42rpx; 
+  font-size: 12px
+}
+.order13{
+  position: relative;
+}

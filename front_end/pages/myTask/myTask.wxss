@@ -1,0 +1,4 @@
+/* pages/myTask/myTask.wxss */
+page{
+  background-color: white;
+}

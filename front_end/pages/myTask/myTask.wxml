@@ -1,0 +1,21 @@
+<view style="position: relative; width: 750rpx; height: 84rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; border-bottom: 1px solid #d1d1d1">
+  <view style="position: relative; width: 418rpx; height: 72rpx; display: block; box-sizing: border-box; left: 40rpx; top: 12rpx; line-height: 90rpx; font-weight: 500; font-size: 20px">{{order.title}}</view>
+
+  <view style="position: relative; width: 206rpx; background: whi; height: 36rpx; left: 544rpx; top: -24rpx; display: block; box-sizing: border-box; color: #a4a4a7; font-size: 10px">{{order.ordertime}}</view>
+</view>
+<image style="position: relative; left: 44rpx; top: 34rpx; width: 50rpx; height: 50rpx; display: inline-block; box-sizing: border-box" src="{{order.ordereravatar}}" />
+<view style="position: relative; width: 246rpx; height: 52rpx; display: block; box-sizing: border-box; left: 118rpx; top: -24rpx; color: rgb(62,222,199); font-size: 15px; line-height: 52rpx">{{order.orderername}}</view>
+<image style="position: relative; width: 50rpx; height: 50rpx; display: inline-block; box-sizing: border-box; left: 468rpx; top: -76rpx" src="/images/money.png" />
+<view style="position: relative; width: 198rpx; height: 50rpx; display: block; box-sizing: border-box; left: 540rpx; top: -134rpx; color: rgb(62,222,199); font-size: 15px; line-height: 52rpx">带带币：{{order.value}}</view>
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 34rpx; top: 176rpx; font-size: 15px">取物地址</view>
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 34rpx; top: 324rpx; font-size: 15px">交付地址</view>
+
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 36rpx; top: -122rpx; font-size: 15px">物品内容</view>
+
+<view style="position: relative; width: 92rpx; height: 50rpx; display: block; box-sizing: border-box; left: 178rpx; top: -172rpx; font-size: 10px; line-height: 25px; color: rgb(62,222,199); font-weight: 900"></view>
+<view style="position: relative; width: 680rpx; height: 148rpx; left: 36rpx; top: -172rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.content}}</view>
+<view style="position: relative; width: 680rpx; height: 148rpx; left: 34rpx; top: -123rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.target_address}}</view>
+<view style="position: relative; width: 680rpx; height: 148rpx; left: 34rpx; top: -72rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.orderer_address}}
+  <view style="position: relative; width: 680rpx; height: 148rpx; left: 0rpx; top: 148rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.phone}}</view>
+  <view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: -50rpx; font-size: 15px; color: black">电话</view>
+</view>

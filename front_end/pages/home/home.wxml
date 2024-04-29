@@ -1,0 +1,42 @@
+<!--pages/home/home.wxml-->
+<!--问题列表
+  1.实现订单渲染
+  <view wx:if="{{isUp=='true'}}" style="position: fixed; width: 750rpx; background: rgba(0,0,0,0.1); display: block; box-sizing: border-box; left: 0rpx; top: -44rpx ;z-index: 100;height: 1000px;">
+  <view style="position: relative; width: 562rpx; background: white; height: 488rpx; left: 94rpx; top: 512rpx; display: block; box-sizing: border-box; border-radius: 20px">
+    <view style="position: relative; width: 486rpx; height: 90rpx; display: block; left: 36rpx; top: 0rpx; box-sizing: border-box; border-bottom: 1px solid rgb(231, 227, 227)">
+      <text style="position: relative; left: 179rpx; top: 25rpx; font-weight: 600">微信授权</text>
+    </view>
+    <image style="position: relative; width: 70rpx; height: 70rpx; display: inline-block; box-sizing: border-box; left: 240rpx; top: 24rpx" src="/images/shangbiao.png" />
+    <text style="position: relative; left: 2rpx; top: 72rpx; font-size: 12px; font-weight: 600">带带申请获得以下权限</text>
+    <view style="border-top: 1px solid rgb(231, 227, 227); position: relative; width: 404rpx; height: 88rpx; left: 73rpx; top: 76rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 0rpx; top: 12rpx; font-size: 10px; color: rgb(143, 141, 141)">· 获得你的公开信息(昵称、头像等)</text>
+    </view>
+    <button bindtap="allow" style="position: relative; left: -8rpx; top: 120rpx; width: 172rpx; height: 70rpx; display: block; box-sizing: border-box; font-size: 14px; background-color: rgb(0,204,0); color: white">允许</button>
+  </view>
+</view>
+-->
+<swiper indicator-dots class="box1">
+  <swiper-item wx:for="{{swiperlist}}">
+    <image src="{{item.image}}" mode="" />
+  </swiper-item>
+</swiper>
+<!--用于表示订单层-->
+<view wx:for="{{orderList}}" class="box2" style="width: 750rpx; display: block; box-sizing: content-box">
+  <view data-orderid="{{item.id}}" bindtap="gotoOrder" class="order1">
+    <view class="order11">
+      <view class="text1">{{item.title}}</view>
+      <view class="text2"></view>
+      <view class="text3" style="width: 280rpx; height: 80rpx; display: block; box-sizing: border-box; position: relative; left: -22rpx; top: 0rpx">{{item.ordertime}}</view>
+    </view>
+    <view class="order12">
+      <view class="text4">{{item.content}}</view>
+    </view>
+    <view class="order13" style="position: relative; left: 0rpx; top: 0rpx">
+      <image src="/images/gps.png" style="position: relative; left: 30rpx; top: 44rpx; width: 20px; height: 20px; display: inline-block; box-sizing: border-box" />
+    <image style="position: relative; left: 404rpx; top: 44rpx; width: 20px; height: 20px; display: inline-block; box-sizing: border-box" src="/images/money.png" />
+      <view class="text5" style="position: relative; left: 70rpx; top: 0rpx; width: 304rpx; height: 32rpx; display: block; box-sizing: border-box">{{item.orderer_address}}</view>
+      <view class="text6" style="position: relative; left: 508rpx; top: -32rpx; width: 212rpx; height: 32rpx; display: block; box-sizing: border-box">带带币：{{item.value}}</view>
+    </view>
+  </view>
+</view>
+<view catchtap="gotoCreate" class="add" catchtouchmove="true" style="position: fixed; left: 616rpx; top: 310rpx; line-height: 43px">+</view>

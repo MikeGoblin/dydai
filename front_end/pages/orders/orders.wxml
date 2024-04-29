@@ -1,0 +1,56 @@
+
+<view style="position: relative; width: 234rpx; height: 68rpx; display: block; box-sizing: border-box; left: 29rpx; top: 40rpx; font-weight: 900">我的发布</view>
+<view class="myorders" wx:for="{{myorderlist}}">
+  <view wx:if="{{item.status!=3&&item.status!=4}}" class="order1">
+    <view class="order11" bindtap="myOrder" data-orderid="{{item.id}}">
+      <view class="text1">{{item.title}}</view>
+      <view class="text2"></view>
+      <view class="text3" style="width: 304rpx; height: 80rpx; display: block; box-sizing: border-box">{{item.ordertime}}</view>
+    </view>
+    <view class="order12" bindtap="myOrder" data-orderid="{{item.id}}">
+      <view class="text4" style="width: 640rpx; height: 78rpx; display: block; box-sizing: border-box">{{item.content}}</view>
+    </view>
+    <view class="order13" style="width: 720rpx; height: 80rpx; display: block; box-sizing: border-box; left: 1rpx; top: 34rpx; position: relative">
+      <view class="text5" style="color: rgb(62,222,199); font-weight: 900; position: relative; left: 36rpx; top: -18rpx; width: 50px; text-align: center">
+      <text wx:if="{{item.status==1}}">订单可用</text>
+      <text wx:if="{{item.status==2}}">订单已接</text>
+      <text wx:if="{{item.status==3}}">订单完成</text>
+      <text wx:if="{{item.status==4}}">订单取消</text>
+      <text wx:if="{{item.status==5}}">订单异常</text>
+      </view>
+      <view data-type="0" data-orderid="{{item.id}}" catchtap="delete" class="text6" style="position: relative; left: 556rpx; top: -50rpx; font-weight: 900; width: 50px;">删除</view>
+    </view>
+  </view>
+</view>
+<view style="position: relative; width: 234rpx; height: 68rpx; display: block; box-sizing: border-box; left: 29rpx; top: 38rpx; font-weight: 900">我的接取</view>
+<view class="myTasks" wx:for="{{mytasklist}}">
+  <view wx:if="{{item.status!=3&&item.status!=4}}" class="order1" bindtap="myTask" data-orderid="{{item.id}}">
+    <view class="order11">
+      <view class="text1">{{item.title}}</view>
+      <view class="text2"></view>
+      <view class="text3" style="width: 304rpx; height: 80rpx; display: block; box-sizing: border-box">{{item.ordertime}}</view>
+    </view>
+    <view class="order12">
+      <view class="text4" style="width: 640rpx; height: 82rpx; display: block; box-sizing: border-box">{{item.content}}</view>
+    </view>
+    <view class="order13" style="position: relative; left: 44rpx; top: 58rpx; width: 720rpx; height: 40rpx; display: block; box-sizing: border-box">
+      
+      <view class="text6" style="position: relative; left: 0rpx; top: -32rpx; width: 50px; height: 32rpx; display: block; box-sizing: border-box; font-weight: 900; text-align: center">
+      <text wx:if="{{item.status==1}}">订单可用</text>
+      <text wx:if="{{item.status==2}}">订单已接</text>
+      <text wx:if="{{item.status==3}}">订单完成</text>
+      <text wx:if="{{item.status==4}}">订单取消</text>
+      <text wx:if="{{item.status==5}}">订单异常</text>
+      </view>
+      <view data-type="1" data-orderid="{{item.id}}" catchtap="delete" class="text6" style="position: relative; left: 508rpx; top: -64rpx; font-weight: 900; width: 50px">删除</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{display=='true'}}" style="position: fixed; width: 568rpx; background: white; height: 290rpx; left: 92rpx; top: 500rpx; display: block; box-sizing: border-box">
+  <view style="position: relative; width: 568rpx; height: 50rpx; display: block; box-sizing: border-box; left: 0rpx; top: 40rpx; text-align: center; font-weight: 600">删除</view>
+  <view style="position: relative; width: 568rpx; height: 92rpx; left: 0rpx; top: 57rpx; display: block; box-sizing: border-box; text-align: center; font-size: 13px; color: rgb(187, 187, 187); border-bottom: 1px solid rgb(187, 187, 187); line-height: 40px">操作执行后不可更改</view>
+
+  <button bindtap="concel" style="position: relative; left: -148rpx; top: 57rpx; width: 272rpx; height: 92rpx; display: block; box-sizing: border-box; background: white; font-size: 15px">取消</button>
+  <button bindtap="confirm" style="position: relative; left: 148rpx; top: -36rpx; width: 272rpx; height: 92rpx; display: block; color: yellowgreen; font-size: 15px; background: white; box-sizing: border-box">确认</button>
+  <view style="position: relative; width: 2rpx; background: #d3d3d3; height: 92rpx; left: 280rpx; top: -128rpx; display: block; box-sizing: border-box"></view>
+</view>

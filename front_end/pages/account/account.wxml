@@ -1,0 +1,40 @@
+<view style="position: relative; width: 750rpx; background: rgb(36,223,192); height: 270rpx; display: block; box-sizing: border-box; left: 1rpx; top: 0rpx">
+  <text style="position: relative; left: 328rpx; top: 86rpx; color: white; font-size: 28px; display: block; width: 318rpx; height: 74rpx; box-sizing: content-box">{{coin}}</text>
+
+  <text style="position: relative; left: 233rpx; top: 113rpx; color: white; font-weight: 900; font-size: 14px; width: 284rpx; text-align: center; display: block; height: 38rpx; box-sizing: border-box">当前带带币</text>
+</view>
+<image style="position: relative; left: 230rpx; top: -180rpx; width: 74rpx; height: 74rpx; display: inline-block; box-sizing: border-box" src="/images/huobi.png"/>
+<view style="box-sizing: border-box; position: relative; width: 748rpx; height: 128rpx; display: block; box-sizing: border-box; left: 0rpx; top: -82rpx">
+  <view style="border-right: 2px solid #f0eded; box-sizing: border-box; position: relative; width: 33.3%; height: 128rpx; display: block; left: 0rpx; top: 0rpx; color: #d3d3d3">
+    <text style="position: relative; left: 77rpx; top: 20rpx; font-size: 12px; color: rgb(126, 129, 129); font-weight: 600">累计获得</text>
+    <text style="position: relative; left: 24rpx; top: 20rpx; font-size: 12px; color: rgb(36,223,192); font-weight: 600; display: inline-block; width: 100px; text-align: center">{{coin_gained}}</text>
+  </view>
+<view style="border-right: 2px solid #f0eded; box-sizing: border-box; position: relative; width: 33.3%; height: 128rpx; display: block; left: 250rpx; top: -128rpx">
+  <text style="position: relative; left: 77rpx; top: 20rpx; font-size: 12px; color: rgb(126, 129, 129); font-weight: 600">累计使用</text>
+  <text style="position: relative; left: 24rpx; top: 20rpx; font-size: 12px; color: rgb(126, 129, 129); font-weight: 600; text-align: center; display: inline-block; width: 100px">{{coin_used}}</text>
+</view>
+<view style="box-sizing: border-box; position: relative; width: 33.3%; height: 128rpx; display: block; left: 500rpx; top: -256rpx">
+  <text style="position: relative; left: 77rpx; top: 20rpx; font-size: 12px; color: rgb(126, 129, 129); font-weight: 600">累计接单</text>
+  <text style="position: relative; left: 24rpx; top: 20rpx; font-size: 12px; color: rgb(126, 129, 129); font-weight: 600; text-align: center; display: inline-block; width: 100px">{{allnum}}</text>
+  </view>
+</view>
+<view wx:for="{{orders}}" style="position: relative; width: 748rpx; left: 0rpx; top: -82rpx; display: block; box-sizing: border-box; height: 100rpx">
+  <view style="position: relative; width: 748rpx; background-color:rgb(232, 240, 229); height: 100rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <text style="position: relative; left: 36rpx; top: 29rpx; color: rgb(115, 119, 118); font-size: 13px; display: block; width: 200rpx; height: 32rpx; box-sizing: border-box">{{item.info}}</text>
+  
+    <text style="position: relative; left: -122rpx; top: 50rpx;color: rgb(166, 170, 169);font-size: 12px;">{{item.datetime}}</text>
+  
+    <text wx:if="{{item.value>0}}" style="position: relative; left: 646rpx; top: 2rpx; color: rgb(36,223,192); font-size: 12px; font-weight: 600; width: 84rpx; height: 32rpx; box-sizing: border-box; display: block; text-align: center">{{item.value}}
+    </text>
+    <text wx:if="{{item.value<0}}"  style="position: relative; left: 646rpx; top: 2rpx; color: rgb(36,223,192); font-size: 12px; font-weight: 600; width: 84rpx; height: 32rpx; box-sizing: border-box; display: block; text-align: center">{{item.value*-1}}
+    </text>
+    <text wx:if="{{item.value==0}}"  style="position: relative; left: 646rpx; top: 2rpx; color: rgb(36,223,192); font-size: 12px; font-weight: 600; width: 84rpx; height: 32rpx; box-sizing: border-box; display: block">{{item.value}}
+    </text>
+    <view style="position: relative; width: 42rpx; height: 32rpx; left: 646rpx; top: -30rpx; display: block; box-sizing: border-box; color: rgb(36,223,192); font-size: 15px; font-weight: 600; line-height: 32rpx" wx:if="{{item.value>0}}">+</view>
+    <view style="position: relative; width: 42rpx; height: 32rpx; left: 650rpx; top: -30rpx; display: block; box-sizing: border-box; color: rgb(36,223,192); font-size: 15px; font-weight: 600; line-height: 32rpx" wx:if="{{item.value<0}}">-</view>
+  </view>
+</view>
+
+
+
+

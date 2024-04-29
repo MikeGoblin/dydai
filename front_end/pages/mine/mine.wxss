@@ -1,0 +1,4 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #efeff4;
+}

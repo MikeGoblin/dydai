@@ -1,0 +1,29 @@
+
+<view style="position: relative; width: 750rpx; background: white; height: 228rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <image style="position: relative; width: 100rpx; height: 96rpx; display: inline-block; box-sizing: border-box; border-radius: 50rpx;  left: 324rpx; top: 42rpx" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.xzpUDSJ6in06dP9Ju6vprwHaHa?w=192&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+
+  <text style="position: relative; display: block; left: 0rpx; top: 48rpx;text-align: center;">测试用户</text>
+</view>
+<view bindtap="goToAccount" style="position: relative; width: 750rpx; background: white; height: 90rpx; left: 1rpx; top: 46rpx; display: block; box-sizing: border-box">
+  <image style="position: relative; width: 50rpx; height: 54rpx; display: inline-block; box-sizing: border-box; left: 38rpx; top: 18rpx" src="/images/account.png" />
+
+
+
+  <text style="position: relative; left: 64rpx; top: 1rpx; font-size: 14px">账户</text>
+</view>
+<view style="position: relative; width: 750rpx; background: white; height: 90rpx; left: 1rpx; top: 86rpx; display: block; box-sizing: border-box; border-bottom: 1px solid rgb(214, 212, 212)">
+  <image style="position: relative; width: 52rpx; height: 52rpx; display: inline-block; box-sizing: border-box; left: 38rpx; top: 16rpx" src="/images/charge.png" />
+
+
+
+  <text style="position: relative; left: 64rpx; top: 1rpx; font-size: 14px">充值</text>
+</view>
+<view style="position: relative; width: 750rpx; background: white; height: 90rpx; left: 1rpx; top: 86rpx; display: block; box-sizing: border-box">
+  <image style="position: relative; width: 50rpx; height: 50rpx; display: inline-block; box-sizing: border-box; left: 38rpx; top: 15rpx" src="/images/exchange.png" />
+
+
+
+  <text style="position: relative; left: 64rpx; top: 1rpx; font-size: 14px">兑换</text>
+</view>
+
+

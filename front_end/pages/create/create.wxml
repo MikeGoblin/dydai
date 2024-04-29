@@ -1,0 +1,42 @@
+<view wx:if="{{isPublish=='true'}}" style="position: fixed; width: 750rpx; background: rgba(0,0,0,0.1); display: block; box-sizing: border-box; left: 0rpx; top: -44rpx ;z-index: 100;height: 1000px;">
+  <view style="position: relative; width: 562rpx; background: white; height: 415rpx; left: 94rpx; top: 434rpx; display: block; box-sizing: border-box; border-radius: 20px">
+    <text style="position: relative; left: 201rpx; top: 66rpx; font-size: 18px; font-weight: 600">发布成功</text>
+    <view style="border-top: 1px solid rgb(231, 227, 227); position: relative; width: 522rpx; height: 44rpx; left: 12rpx; top: 100rpx; display: block; box-sizing: border-box">
+      <text style="position: relative; left: 156rpx; top: 41rpx; font-size: 15px; color: rgb(143, 141, 141)">即将跳转到首页</text>
+    </view>
+    <button bindtap="returnToHome" style="position: relative; left: -8rpx; top: 188rpx; width: 172rpx; height: 70rpx; display: block; box-sizing: border-box; font-size: 14px; background-color: rgb(0,204,0); color: white">确定</button>
+  </view>
+</view>
+<form bindsubmit="publish" bindreset="formReset">
+<view style="position: relative; width: 702rpx; height: 110rpx; display: block; box-sizing: border-box; left: 25rpx; top: 0rpx; border-bottom: 1px solid #d1d1d1">
+  <input name="title" style="position: relative; left: 46rpx; top: 32rpx; width: 402rpx; height: 78rpx; display: block; box-sizing: border-box; color: black; font-weight: 700" placeholder="点击编辑标题" />
+</view>
+<image style="position: relative; width: 42rpx; height: 42rpx; display: inline-block; box-sizing: border-box; left: 66rpx; top: 30rpx" src="/images/money.png"/>
+<view style="font-size: 10px; color: rgb(62,222,199); position: relative; width: 174rpx; height: 42rpx; left: 132rpx; top: -20rpx; display: block; box-sizing: border-box; line-height: 42rpx; font-weight: 700">账户余额:{{coin}}</view>
+<view style="position: relative; width: 172rpx; height: 42rpx; display: block; box-sizing: border-box; left: 66rpx; top: 22rpx; font-size: 14px">内容详情</view>
+<textarea name="content" style="position: relative; left: 66rpx; top: 46rpx; width: 562rpx; height: 108rpx; display: block; box-sizing: border-box; border-radius: 5px; border: 2px solid rgb(62,222,199); font-size: 12px" placeholder="请包含对物品的重量体积的描述"/>
+<view style="position: relative; width: 196rpx; height: -6rpx; display: block; box-sizing: border-box; left: 66rpx; top: 90rpx; font-size: 14px">取物地址</view>
+<view style="position: relative; width: 196rpx; height: 42rpx; display: block; box-sizing: border-box; left: 66rpx; top: 364rpx; font-size: 14px">手机号</view>
+<view style="position: relative; width: 196rpx; height: 42rpx; display: block; box-sizing: border-box; left: 70rpx; top: 468rpx; font-size: 14px">悬赏金额</view>
+
+<view style="position: relative; width: 196rpx; height: 42rpx; display: block; box-sizing: border-box; left: 66rpx; top: 120rpx; font-size: 14px">接收地址</view>
+<input name="target_address" style="position: relative; left: 66rpx; top: -10rpx; width: 570rpx; height: 42rpx; display: block; box-sizing: border-box; border-radius: 5px; border: 2px solid rgb(62,222,199); font-size: 12px" value=""/>
+<input name="orderer_address" style="position: relative; left: 67rpx; top: 103rpx; width: 570rpx; height: 36rpx; display: block; box-sizing: border-box; border-radius: 5px; border: 2px solid rgb(62,222,199); font-size: 12px" value="{{address}}"/>
+<input name="phone" style="position: relative; left: 66rpx; top: 214rpx; width: 570rpx; height: 42rpx; display: block; box-sizing: border-box; border-radius: 5px; border: 2px solid rgb(62,222,199); font-size: 12px" value="{{phone}}"/>
+<input name="value" style="position: relative; left: 66rpx; top: 322rpx; width: 570rpx; height: 42rpx; display: block; box-sizing: border-box; border-radius: 5px; border: 2px solid rgb(62,222,199); font-size: 12px" placeholder="(不超过账户余额的正整数)"/>
+<button form-type="submit" style="position: relative; left: -25rpx; top: 392rpx; width: 172rpx; height: 80rpx; display: block; box-sizing: border-box; background-color: rgb(62,222,199); color: white; font-size: 15px; border-radius: 10px">发布</button>
+</form>
+<!--</form>-->
+
+
+
+
+
+
+
+
+
+
+
+
+

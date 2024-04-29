@@ -1,0 +1,28 @@
+<view style="position: relative; width: 750rpx; height: 84rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; border-bottom: 1px solid #d1d1d1">
+  <view style="position: relative; width: 418rpx; height: 72rpx; display: block; box-sizing: border-box; left: 40rpx; top: 12rpx; line-height: 90rpx; font-weight: 500; font-size: 20px">{{order.title}}</view>
+
+  <view style="position: relative; width: 208rpx; background: whi; height: 36rpx; left: 542rpx; top: -24rpx; display: block; box-sizing: border-box; color: #a4a4a7; font-size: 10px">{{order.ordertime}}</view>
+</view>
+<image style="position: relative; left: 44rpx; top: 34rpx; width: 50rpx; height: 50rpx; display: inline-block; box-sizing: border-box" src="{{order.ordereravatar}}" />
+<view style="position: relative; width: 246rpx; height: 52rpx; display: block; box-sizing: border-box; left: 118rpx; top: -24rpx; color: rgb(62,222,199); font-size: 15px; line-height: 52rpx">{{order.orderername}}</view>
+<image style="position: relative; width: 50rpx; height: 50rpx; display: inline-block; box-sizing: border-box; left: 490rpx; top: -76rpx" src="/images/money.png" />
+<view style="position: relative; width: 200rpx; height: 50rpx; display: block; box-sizing: border-box; left: 540rpx; top: -132rpx; color: rgb(62,222,199); font-size: 15px; line-height: 52rpx">带带币：{{order.value}}</view>
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 36rpx; top: 158rpx; font-size: 15px">取物地址</view>
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 34rpx; top: 252rpx; font-size: 15px">交付地址</view>
+
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 36rpx; top: -122rpx; font-size: 15px">物品内容</view>
+
+<view style="position: relative; width: 92rpx; height: 50rpx; display: block; box-sizing: border-box; left: 178rpx; top: -172rpx; font-size: 10px; line-height: 25px; color: rgb(62,222,199); font-weight: 900"></view>
+<view style="position: relative; width: 680rpx; height: 130rpx; left: 36rpx; top: -172rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.content}}</view>
+<view style="position: relative; width: 680rpx; height: 82rpx; left: 34rpx; top: -122rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.target_address}}</view>
+<view style="position: relative; width: 134rpx; height: 50rpx; display: block; box-sizing: border-box; left: 34rpx; top: 72rpx; font-size: 15px">电话</view>
+<view style="position: relative; width: 680rpx; height: 132rpx; left: 34rpx; top: -110rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.orderer_address}}</view>
+<view style="position: relative; width: 680rpx; height: 132rpx; left: 34rpx; top: -60rpx; display: block; box-sizing: border-box; font-size: 15px; color: #a4a4a7">{{order.phone}}
+  <view bindtap="submit" class="bottomFinish" style="position: relative; left: 245rpx; top: 132rpx; width: 191rpx; height: 72rpx; display: block; box-sizing: border-box; background-color: rgb(62,222,199); color: white; font-size: 15px; border-radius: 7px"><view style="text-align: center; position: relative; left: 0rpx; top: 16rpx">提交完成</view></view>
+<view wx:if="{{display=='true'}}" style="position: relative; width: 614rpx; background: white; height: 332rpx; left: 32rpx; top: -496rpx; display: block; box-sizing: border-box; border-radius: 10px; border: 1px solid" class="success">
+<view style="position: relative; width: 614rpx; height: 100rpx; left: 0rpx; top: 0rpx; display: block; box-sizing: border-box; text-align: center; line-height: 60px; font-size: 20px; font-weight: 500; color: black">提交成功</view>
+
+<view style="position: relative; width: 500rpx; height: 122rpx; display: block; box-sizing: border-box; left: 55rpx; top: 3rpx; color: #a4a4a7; text-align: center; font-size: 16px">即将返回上一级页面，进入订单管理可查看更多订单详细信息</view>
+  <button catchtap="finishSubmit" style="position: relative; left: -1rpx; top: 18rpx; background-color: white; width: 600rpx; height: 80rpx; display: block; box-sizing: border-box; color: yellowgreen; border-top: 1px solid rgb(226, 218, 218)">确定</button>
+</view>
+</view>
