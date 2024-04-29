@@ -1,0 +1,37 @@
+server:
+  port: 1145
+# ssl配置
+#  ssl:
+#    key-store-type: JKS
+#    key-store: classpath:
+#    key-store-password:
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  datasource:
+    url: jdbc:mysql://localhost:3306/carry
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: RunCarry
+  redis:
+    host: localhost
+    database: 1
+    port: 6379
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jLoggerImpl
+logging:
+  file:
+    path: ./logs
+  level:
+    root: info
+
+# 小程序配置
+Wechat:
+  appID:
+  appSecret:
+
